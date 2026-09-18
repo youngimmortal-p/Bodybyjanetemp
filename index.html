@@ -8,50 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
-        }
-      .glass {
-            background: rgba(255, 255, 255, 0.04);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-      .accent-hover:hover {
-            box-shadow: 0 0 40px rgba(239, 68, 68, 0.25);
-        }
-      .gradient-text {
-            background: linear-gradient(90deg, #ffffff 0%, #e5e5e5 50%, #ef4444 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-      .mobile-menu { display: none; }
-      .mobile-menu.active { display: flex; }
-      .popup {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 100;
-            transform: translateX(-400px);
-            transition: transform 0.5s ease;
-        }
-      .popup.show { transform: translateX(0); }
-        @media (max-width: 768px) {
-         .desktop-menu { display: none; }
-         .sticky-cta { display: block; }
-        }
-     .sticky-cta { display: none; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="min-h-screen overflow-x-hidden">
 
-    <!-- Background glow -->
+   
     <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-red-950/20 blur-[120px] pointer-events-none"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-[400px] h-[400px] rounded-full bg-zinc-900/40 blur-[100px] pointer-events-none"></div>
 
-    <!-- Sticky Nav -->
+    
     <nav class="fixed top-0 left-0 w-full z-50 glass border-b border-white/5">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
@@ -85,33 +50,44 @@
         </div>
     </nav>
 
-    <!-- Hero - Your Copy -->
-    <header class="max-w-6xl mx-auto px-6 pt-32 pb-20 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+    
+<div class="relative w-full bg-zinc-950 overflow-hidden min-h-[85vh] flex items-center justify-center">
+
+
+    <img src="images/heroimg2.jpg" alt="Athletic woman training background" class="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none select-none">
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-zinc-950"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-transparent to-zinc-950"></div>
+
+    
+    <header class="max-w-6xl mx-auto px-6 pt-32 pb-20 grid lg:grid-cols-2 gap-12 items-center relative z-10 w-full">
         <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border-zinc-800 mb-6">
-                <span class="text- font-bold text-red-400 tracking-widest uppercase">Exclusively For Women</span>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 mb-6">
+                <span class="text-xs font-bold text-red-400 tracking-widest uppercase">Exclusively For Women</span>
             </div>
-            <h1 class="text-4xl md:text-5xl font-black tracking-tight leading-[1.1] mb-6">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight leading-[1.1] mb-6 text-white">
                 Transform Your Body. <br>
                 <span class="gradient-text">Build Your Confidence.</span> <br>
                 Feel Stronger Every Day.
             </h1>
-            <p class="text-zinc-400 font-light text-base md:text-lg max-w-xl leading-relaxed mb-8">
+            <p class="text-zinc-400 font-light text-base md:text-lg max-w-xl leading-relaxed mb-8 drop-shadow-sm">
                 You deserve more than quick fixes and impossible standards. Whether you're starting your fitness journey, getting back on track, or ready to level up, we're here to help you become the healthiest, strongest, and most confident version of yourself.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
                 <a href="#join" class="px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl transition text-center text-sm tracking-wide shadow-lg shadow-red-600/30 accent-hover">
                     Get Started
                 </a>
-                <a href="#why" class="px-8 py-4 glass border-white/10 hover:bg-zinc-900 text-white font-medium rounded-xl transition text-center text-sm">
+                <a href="#why" class="px-8 py-4 glass border border-white/10 hover:bg-zinc-900 text-white font-medium rounded-xl transition text-center text-sm">
                     Learn More
                 </a>
             </div>
             <p class="text-xs text-zinc-500 mt-4">✓ Progress matters more than perfection</p>
         </div>
 
-        <!-- Stats Card - Automation Proof -->
-        <div class="glass rounded-3xl p-8 border-white/10 space-y-6">
+       
+        <div class="glass rounded-3xl p-8 border border-white/10 space-y-6 shadow-xl backdrop-blur-md">
             <div class="flex justify-between items-center pb-4 border-b border-zinc-800">
                 <span class="text-xs font-bold uppercase tracking-wider text-zinc-400">Live Program Stats</span>
                 <span class="w-2 h-2 rounded-full bg-green-500 animate-ping"></span>
@@ -129,20 +105,23 @@
                     <p class="text-xs text-green-400 mt-2">✓ 847 completed workouts today</p>
                 </div>
 
-                <div class="p-4 bg-zinc-900/60 border-zinc-800 rounded-xl flex justify-between items-center">
+                <div class="p-4 bg-zinc-900/60 border border-zinc-800 rounded-xl flex justify-between items-center">
                     <div>
-                        <p class="text- text-red-400 uppercase font-black tracking-widest mb-1">Absolute Meals</p>
+                 
+                        <p class="text-xs text-red-400 uppercase font-black tracking-widest mb-1">Absolute Meals</p>
                         <h5 class="text-sm font-bold text-white">Next Batch Opens Soon</h5>
                     </div>
-                    <span class="text-xs bg-red-500/10 text-red-400 px-3 py-1.5 rounded-md font-bold border-red-500/20">
+                    <span class="text-xs bg-red-500/10 text-red-400 px-3 py-1.5 rounded-md font-bold border border-red-500/20">
                         94% Full
                     </span>
                 </div>
             </div>
         </div>
     </header>
+</div>
 
-    <!-- Why Women Choose Us - Your Copy -->
+
+    
     <section id="why" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900">
         <div class="max-w-3xl mb-12">
             <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Why Women Choose Us</h2>
@@ -150,7 +129,7 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-6">
-            <!-- Card 1 -->
+            
             <div class="glass p-8 rounded-2xl border-zinc-800 accent-hover transition group">
                 <div class="w-14 h-14 rounded-xl bg-red-500/10 border-red-500/20 flex items-center justify-center text-red-400 mb-6">
                     <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -163,7 +142,7 @@
                 </p>
             </div>
 
-            <!-- Card 2 -->
+           
             <div class="glass p-8 rounded-2xl border-zinc-800 accent-hover transition group">
                 <div class="w-14 h-14 rounded-xl bg-zinc-800 border-zinc-700 flex items-center justify-center text-white mb-6">
                     <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -176,7 +155,7 @@
                 </p>
             </div>
 
-            <!-- Card 3 -->
+           
             <div class="glass p-8 rounded-2xl border-zinc-800 accent-hover transition group">
                 <div class="w-14 h-14 rounded-xl bg-zinc-800 border-zinc-700 flex items-center justify-center text-white mb-6">
                     <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -189,7 +168,7 @@
                 </p>
             </div>
 
-            <!-- Card 4 -->
+            
             <div class="glass p-8 rounded-2xl border-zinc-800 accent-hover transition group">
                 <div class="w-14 h-14 rounded-xl bg-zinc-800 border-zinc-700 flex items-center justify-center text-white mb-6">
                     <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -204,53 +183,68 @@
         </div>
     </section>
 
-    <!-- Automation Section -->
+    
     <section id="programs" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900">
-        <div class="max-w-3xl mb-12">
-            <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Stop Losing Clients In Your DMs</h2>
-            <p class="text-zinc-400 text-base">Jane, this automation handles the stress while you focus on coaching.</p>
+   
+    <div class="max-w-3xl mb-12">
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4 text-white">
+            Transform Your Body, Mind, and Routine
+        </h2>
+        <p class="text-zinc-400 text-base">
+            Choose a tailored program designed specifically to help women build strength, drop body fat, and create lasting sustainable habits.
+        </p>
+    </div>
+
+  
+    <div class="grid md:grid-cols-3 gap-6">
+        
+        
+        <div class="glass p-8 rounded-2xl border border-zinc-800 hover:border-red-500/30 transition duration-300 group cursor-pointer">
+            <div class="w-14 h-14 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 mb-6">
+               
+                <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h18M6 6v12a2 2 0 002 2h8a2 2 0 002-2V6M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2M10 11h4M10 15h4" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-400 transition">Sculpt & Tone</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+                Structured gym and home workout guides focused on lean muscle building, glute activation, and functional core strength.
+            </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="glass p-8 rounded-2xl border-zinc-800 accent-hover transition group">
-                <div class="w-14 h-14 rounded-xl bg-red-500/10 border-red-500/20 flex items-center justify-center text-red-400 mb-6">
-                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3.895-3 2s1.343 2 3 2 3.895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold mb-3 group-hover:text-red-400 transition">Auto Payment + Delivery</h3>
-                <p class="text-sm text-zinc-400 leading-relaxed">
-                    Client pays → System verifies → Meal plan + macros sent instantly. Zero WhatsApp screenshots.
-                </p>
+        
+        <div class="glass p-8 rounded-2xl border border-zinc-800 hover:border-red-500/30 transition duration-300 group cursor-pointer">
+            <div class="w-14 h-14 rounded-xl bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-300 group-hover:text-red-400 group-hover:bg-red-500/10 group-hover:border-red-500/20 mb-6 transition duration-300">
+                
+                <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
             </div>
-
-            <div class="glass p-8 rounded-2xl border-zinc-800 accent-hover transition group">
-                <div class="w-14 h-14 rounded-xl bg-zinc-800 border-zinc-700 flex items-center justify-center text-white mb-6">
-                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold mb-3 group-hover:text-red-400 transition">Steps Leaderboard</h3>
-                <p class="text-sm text-zinc-400 leading-relaxed">
-                    Clients log steps on mobile. Auto leaderboard keeps community engaged without you chasing updates.
-                </p>
-            </div>
-
-            <div class="glass p-8 rounded-2xl border-zinc-800 accent-hover transition group">
-                <div class="w-14 h-14 rounded-xl bg-zinc-800 border-zinc-700 flex items-center justify-center text-white mb-6">
-                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold mb-3 group-hover:text-red-400 transition">Client Dashboard</h3>
-                <p class="text-sm text-zinc-400 leading-relaxed">
-                    Each client tracks meals, steps, progress. Less “Coach what’s my plan?” DMs for you.
-                </p>
-            </div>
+            <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-400 transition">Fuel & Nourish</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+                Customized high-protein meal guides and macro tracking frameworks. Eat the foods you love while hitting your fat loss goals.
+            </p>
         </div>
-    </section>
 
-    <!-- Results Section - Your Copy -->
+        
+        <div class="glass p-8 rounded-2xl border border-zinc-800 hover:border-red-500/30 transition duration-300 group cursor-pointer">
+            <div class="w-14 h-14 rounded-xl bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-300 group-hover:text-red-400 group-hover:bg-red-500/10 group-hover:border-red-500/20 mb-6 transition duration-300">
+               
+                <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-400 transition">Empower Circle</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+                Weekly check-ins, direct coach support, and an exclusive community of like-minded women keeping you accountable every step of the way.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+  
     <section id="results" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900">
         <div class="max-w-3xl mb-12 text-center mx-auto">
             <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Achieve Results You'll Love</h2>
@@ -291,7 +285,7 @@
         </div>
     </section>
 
-    <!-- Testimonials - Your Copy + Bright/Marvelous -->
+   
     <section id="testimonials" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900">
         <h2 class="text-3xl font-black text-center mb-12">What Our Members Say</h2>
         <div class="grid md:grid-cols-3 gap-6">
@@ -322,7 +316,7 @@
         </div>
     </section>
 
-    <!-- Final CTA - Your Copy -->
+   
     <section id="join" class="max-w-4xl mx-auto px-6 py-20">
         <div class="glass rounded-3xl p-10 border-white/10 text-center">
             <h2 class="text-3xl md:text-4xl font-black mb-4">Ready To Become Your Best Self?</h2>
@@ -342,12 +336,12 @@
         </div>
     </section>
 
-    <!-- Sticky Mobile CTA -->
+   
     <a href="#join" class="sticky-cta fixed bottom-6 right-6 bg-red-600 text-white font-bold px-6 py-3 rounded-full shadow-lg shadow-red-600/40 z-50 md:hidden">
         Join Now
     </a>
 
-    <!-- Recent Sign-up Popup -->
+    
     <div id="popup" class="popup glass rounded-xl p-4 border-zinc-800 shadow-xl max-w-xs">
         <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-sm font-bold">A</div>
@@ -362,31 +356,7 @@
         <p>&copy; 2026 BodyByJane Collective • Built by YoungImmortal Studio</p>
     </footer>
 
-    <script>
-        // Mobile menu
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-        });
-
-        // Recent sign-up popup every 8 seconds
-        const names = ['Amara', 'Tolu', 'Blessing', 'Chioma', 'Ada', 'Kemi', 'Fola', 'Zara'];
-        const programs = ['Absolute Meals Challenge', '10K Steps Batch', '1-on-1 Mentorship'];
-        const popup = document.getElementById('popup');
-
-        function showPopup() {
-            const name = names[Math.floor(Math.random() * names.length)];
-            const program = programs[Math.floor(Math.random() * programs.length)];
-            popup.querySelector('p').textContent = `${name} just joined`;
-            popup.querySelector('p + p').textContent = `${program} • just now`;
-            popup.classList.add('show');
-            setTimeout(() => popup.classList.remove('show'), 4000);
-        }
-
-        setTimeout(showPopup, 3000);
-        setInterval(showPopup, 8000);
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>

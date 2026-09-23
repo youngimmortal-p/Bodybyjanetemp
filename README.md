@@ -87,7 +87,7 @@ No environment variables are currently documented for this project.
 
 ## Live Demo
 
-Not provided.
+[live demo](https://scintillating-florentine-592c89.netlify.app/)
 
 ## GitHub Repository
 
